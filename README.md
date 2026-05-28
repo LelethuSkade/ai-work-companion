@@ -1,138 +1,256 @@
-# WorkAI — AI Workplace Productivity Assistant
+# WorkAI — AI Workplace Assistant
 
-## Project Overview
+<p align="center">
+  <strong>Modern AI-powered workplace productivity tools built with React 19, TanStack Start, and Tailwind CSS.</strong>
+</p>
 
-WorkAI is a modern, responsive web application designed to help professionals automate repetitive workplace tasks using structured AI prompts. Built with a clean SaaS-style dashboard, it provides five focused AI tools that generate editable, actionable outputs — from polished emails to step-by-step task plans — all within a single intuitive interface.
-
----
-
-## Problem Statement
-
-Professionals spend hours every week on repetitive tasks: drafting emails, summarizing meeting notes, planning projects, and researching topics. Existing AI tools often require complex prompt engineering, produce unformatted outputs, or lack a unified workspace. WorkAI solves this by providing pre-structured AI tools with built-in prompt templates, editable outputs, and a seamless dashboard experience.
+<p align="center">
+  Automate repetitive workplace tasks with structured AI workflows for emails, meeting summaries, task planning, research, and brainstorming.
+</p>
 
 ---
 
-## Solution Overview
+## Overview
 
-WorkAI centralizes five common workplace AI use cases into one cohesive dashboard:
+WorkAI is a responsive AI workplace assistant designed to help professionals work faster and more efficiently through guided AI workflows.
 
-- **Structured Inputs** — Each tool asks for the right context (recipient, tone, deadlines, etc.) so the AI produces relevant results without guesswork.
-- **Editable Outputs** — All generated content appears in editable text areas, so users can refine before sharing.
-- **Responsive Design** — A collapsible sidebar and mobile-friendly layout ensure the app works on any device.
-- **Copy-to-Clipboard** — One-click copy on every output for instant use in emails, documents, or chat apps.
-- **Responsible AI Disclaimer** — A visible reminder that AI outputs should be reviewed before use.
+Instead of relying on generic prompts, WorkAI provides focused productivity tools with structured inputs and editable outputs, making AI-generated content easier to refine and use in real workplace scenarios.
+
+The application combines a clean SaaS-style dashboard with reusable UI architecture and mobile-friendly design patterns.
 
 ---
 
 ## Features
 
-| Tool | What it does |
-|------|--------------|
-| **Smart Email Generator** | Draft polished emails with structured inputs (recipient, topic, tone, key points). |
-| **Meeting Notes Summarizer** | Paste a transcript and get a clear, structured summary with action items and decisions. |
-| **AI Task Planner** | Enter a goal, deadline, and context to generate actionable step-by-step plans. |
-| **AI Research Assistant** | Ask a question, pick an audience, and receive a structured research brief. |
-| **AI Chatbot** | Open-ended conversational AI for brainstorming, Q&A, and idea exploration. |
+### Smart Email Generator
 
-All outputs are fully editable before copying or sharing.
+Generate polished workplace emails using structured inputs such as:
+
+* Recipient
+* Topic
+* Tone
+* Key talking points
+
+### Meeting Notes Summarizer
+
+Transform raw meeting transcripts into:
+
+* Structured summaries
+* Action items
+* Decisions
+* Follow-up tasks
+
+### AI Task Planner
+
+Generate actionable execution plans using:
+
+* Goals
+* Deadlines
+* Context constraints
+
+### AI Research Assistant
+
+Create audience-focused research briefs with organized insights and recommendations.
+
+### AI Chatbot
+
+Use conversational AI for:
+
+* Brainstorming
+* Productivity guidance
+* Q&A
+* Idea exploration
 
 ---
 
-## Tools Used
+## Key UX Highlights
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | [TanStack Start](https://tanstack.com/start) (React 19 + Vite 7 + SSR) |
-| **Styling** | Tailwind CSS v4 |
-| **UI Components** | shadcn/ui (Card, Button, Textarea, Select, Sheet, etc.) |
-| **Routing** | TanStack Router (file-based) |
-| **Icons** | Lucide React |
-| **AI Engine** | Client-side mock generator (ready for backend / API integration) |
-| **Language** | TypeScript |
-| **Package Manager** | Bun |
+* Structured AI workflows
+* Editable AI-generated outputs
+* Copy-to-clipboard functionality
+* Mobile-first responsive design
+* Reusable AI tool architecture
+* Consistent dashboard experience
+* Collapsible sidebar navigation
 
 ---
 
-## Setup Instructions
+## Tech Stack
 
-```bash
-# 1. Clone the repository
-git clone <repo-url>
-cd workai
+| Category        | Technology                    |
+| --------------- | ----------------------------- |
+| Framework       | TanStack Start                |
+| Frontend        | React 19                      |
+| Language        | TypeScript                    |
+| Styling         | Tailwind CSS v4               |
+| UI Components   | shadcn/ui                     |
+| Routing         | TanStack Router               |
+| Icons           | Lucide React                  |
+| Package Manager | Bun                           |
+| AI Layer        | Client-side mock AI generator |
 
-# 2. Install dependencies
+---
+
+## Project Structure
+
+```bash id="a3x4rv"
+src/
+├── components/
+│   ├── ai-tool.tsx
+│   ├── dashboard-layout.tsx
+│   ├── sidebar.tsx
+│   └── ui/
+│
+├── hooks/
+│   └── use-form-values.ts
+│
+├── routes/
+│   ├── email.tsx
+│   ├── meetings.tsx
+│   ├── planner.tsx
+│   ├── research.tsx
+│   └── chatbot.tsx
+│
+├── lib/
+│   └── mock-generate.ts
+│
+└── styles/
+```
+
+---
+
+## Getting Started
+
+### Clone the Repository
+
+```bash id="zgvq0k"
+git clone https://github.com/LelethuSkade/ai-work-companion.git
+```
+
+### Navigate into the Project
+
+```bash id="2mds8r"
+cd ai-work-companion
+```
+
+### Install Dependencies
+
+```bash id="9sh3ba"
 bun install
+```
 
-# 3. Start the development server
+### Start the Development Server
+
+```bash id="zdujlwm"
 bun run dev
+```
 
-# 4. Open in browser
-# http://localhost:3000
+Open the app in your browser:
 
-# 5. Build for production
+```bash id="hgr6d2"
+http://localhost:3000
+```
+
+---
+
+## Production Build
+
+### Build
+
+```bash id="8u0mvf"
 bun run build
+```
 
-# 6. Preview production build locally
+### Preview
+
+```bash id="3g13k7"
 bun run preview
 ```
 
 ---
 
-## Sample Prompts
-
-Here are example inputs you can try in each tool:
+## Example Workflows
 
 ### Smart Email Generator
-- **Recipient:** `Project Team`
-- **Topic:** `Q3 Roadmap Review`
-- **Tone:** `Professional`
-- **Key Points:**
-  ```
-  Finalize feature priorities by Friday
-  Assign owners to each initiative
-  Schedule follow-up for next Monday
-  ```
 
-### Meeting Notes Summarizer
-- **Transcript:**
-  ```
-  We discussed the new onboarding flow. Sarah will own the UX redesign. 
-  The engineering team needs two sprints. Budget was approved. 
-  Next review is scheduled for June 15th.
-  ```
+**Input**
 
-### AI Task Planner
-- **Goal:** `Launch new landing page`
-- **Deadline:** `End of month`
-- **Context:** `Small team, needs design + copy + dev`
+```txt id="sz8pjm"
+Recipient: Project Team
+Topic: Q3 Roadmap Review
+Tone: Professional
+```
 
-### AI Research Assistant
-- **Question:** `What are the best practices for remote team collaboration in 2025?`
-- **Audience:** `Team leads at a tech startup`
+**Generated Output**
 
-### AI Chatbot
-- **Message:** `How do I prioritize features when everything feels urgent?`
+```txt id="cfxyym"
+A polished workplace email with action items, ownership assignments, and follow-up scheduling.
+```
 
 ---
 
-## Challenges and Solutions
+### Meeting Notes Summarizer
 
-| Challenge | Solution |
-|-----------|----------|
-| **AI outputs need to be editable** | All generated content renders in `<Textarea>` components, allowing users to refine results before copying. |
-| **Mobile responsiveness** | A collapsible Sheet sidebar with a backdrop overlay ensures navigation works smoothly on small screens. |
-| **Consistent UX across tools** | A reusable `AiTool` component standardizes the input → generate → output → copy flow for all five tools. |
-| **No backend yet** | A client-side `mockGenerate` function simulates AI responses with realistic templates, making the app fully functional while keeping it ready for a real API integration. |
-| **Form state management** | A custom `useFormValues` hook keeps form state clean and consistent across every tool page. |
+**Input**
+
+```txt id="xlyl6j"
+Discussion about onboarding redesign, sprint planning, and budget approval.
+```
+
+**Generated Output**
+
+```txt id="awz24w"
+A structured summary containing key decisions, owners, timelines, and next steps.
+```
+
+---
+
+## Challenges & Solutions
+
+| Challenge                           | Solution                                           |
+| ----------------------------------- | -------------------------------------------------- |
+| AI outputs need editing flexibility | Outputs render inside editable textarea components |
+| Consistent UX across tools          | Reusable `AiTool` component architecture           |
+| Mobile responsiveness               | Sidebar Sheet navigation with responsive layouts   |
+| No backend integration yet          | Mock AI generator simulates realistic responses    |
+| Shared form state management        | Custom `useFormValues` hook                        |
+
+---
+
+## Future Improvements
+
+* OpenAI API integration
+* Anthropic Claude support
+* Authentication & user accounts
+* Saved prompt history
+* Streaming AI responses
+* Export to PDF/Markdown
+* Team collaboration features
+* Usage analytics dashboard
+* Prompt templates marketplace
+* Enhanced dark mode support
 
 ---
 
 ## Responsible AI
 
-AI-generated content may contain inaccuracies, outdated information, or unintended bias. Always review and edit outputs before sharing, and avoid entering confidential or sensitive information.
+AI-generated outputs may contain inaccuracies, outdated information, or unintended bias.
+
+Always review and edit generated content before sharing or publishing.
+
+Avoid entering confidential or sensitive information into AI prompts.
+
+---
+
+## Author
+
+Built by Lelethu Skade.
+
+GitHub:
+https://github.com/LelethuSkade
 
 ---
 
 ## License
 
-Private — built with Lovable.
+Private — Built with Lovable.
